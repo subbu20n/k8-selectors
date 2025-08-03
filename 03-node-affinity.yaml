@@ -1,18 +1,26 @@
 apiVersion: v1 
 kind: Pod 
 metadata: 
-      name: with-node-affinity 
+     name: with-node-affinity 
 spec: 
-   affinity: 
-      nodeAffinity: 
-        requiredDuringSchedulingIgnoredDuringExecution: 
-          nodeSelectorTerms: 
-          - matchExpressions: 
-            - key: hardware 
-              operator: In 
-              values: 
-              #- gpu
-              - gpuuu        
+   affinity:
+     nodeAffinity: 
+      #  requiredDuringSchedulingIgnoredDuringExecution: 
+      #    nodeSelectors: 
+      #    - matchExpressions: 
+      #      - key: hardware 
+      #        operator: In 
+      #        values: 
+      #        # - gpu 
+      #        - gpuuu     
+       preferedDuringSchedulingIgnoredDuringScheduling: 
+       - weight: 1 
+         preference: 
+           matchExpressions: 
+           - key: another-node-label-key 
+             operator: In 
+             values: 
+             - another-node-label-value       
    containers: 
    - name: with-node-affinity 
-     image: nginx 
+     image: nginx               
