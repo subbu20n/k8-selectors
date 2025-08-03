@@ -4,7 +4,7 @@ metadata:
      name: pod-1 
      labels: 
         app-name: pod-1 
-        purpose: pod-anti-affinity 
+        purpose: pod-affinity 
 spec: 
    containers:
    - name: pod-1 
