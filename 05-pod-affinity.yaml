@@ -28,7 +28,7 @@ spec:
       #       values: 
       #       - pod-1 
       #   topologyKey: "kubernetes.io/hostname" 
-      preferredDuringSchedulindIgnoredDuringExecution: 
+      preferredDuringSchedulingIgnoredDuringExecution: 
       - weight: 1 
         podAffinityTerm: 
            labelSelector: 
