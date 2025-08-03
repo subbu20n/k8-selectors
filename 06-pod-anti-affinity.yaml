@@ -1,0 +1,11 @@
+apiVerion: v1 
+kind: Pod 
+metadata: 
+     name: pod-1 
+     labels: 
+        app-name: pod-1 
+        purpose: pod-anti-affinity 
+spec: 
+   containers:
+   - name: pod-1 
+     image: nginx         
