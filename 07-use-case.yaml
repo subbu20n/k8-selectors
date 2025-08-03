@@ -23,6 +23,6 @@ spec:
                         - pod-1 
                     topologyKey: "kubernetes.io/hostname" 
            containers: 
-           - name: redis-cache 
+           - name: redis-server 
              image: redis:3.2-alpine                                            
 
