@@ -6,7 +6,7 @@ spec:
    affinity:
      nodeAffinity: 
        requiredDuringSchedulingIgnoredDuringExecution: 
-        nodeSelectors: 
+        nodeSelectorTerms: 
         - matchExpressions: 
           - key: hardware 
             operator: NotIn 
