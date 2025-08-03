@@ -22,7 +22,7 @@ spec:
     podAffinity: 
       requiredDuringSchedulingIgnoredDuringExecution: 
       - labelSelector: 
-        - matchExpressions: 
+         matchExpressions: 
           - key: app-name 
             operator: In 
             values: 
