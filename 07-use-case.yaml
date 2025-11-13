@@ -25,40 +25,40 @@ spec:
         containers: 
         - name: redis-server 
           image: redis:3.2-alpine                       
-# --- 
-# apiVersion: v1 
-# kind: Deployment 
-# metadata: 
-#     name: web-server 
-# spec: 
-#    replicas: 3 
-#    selector: 
-#      matchLabels: 
-#         app: web-store 
-#    template: 
-#       metadata:  
-#          labels: 
-#             app: web-app 
-#       spec: 
-#          affinity: 
-#            podAntiAffinity: 
-#               requiredDuringSchedulingIgnoredDuringExecution: 
-#               - labelSelector: 
-#                   matchExpressions: 
-#                   - key: APP 
-#                     operator: In 
-#                     values: 
-#                     - web-app 
-#                 topologyKey: "kubernetes.io/hostname" 
-#            podAffinity: 
-#               requiredDuringSchedulingIgnoreDuringExecution: 
-#               - labelSeclector: 
-#                   matchExpressions: 
-#                   - key: app 
-#                     operator: In 
-#                     values: 
-#                     - web-app 
-#          containers: 
-#          - name: web-app
-#            image: nginx:1.16-alpine            
+--- 
+apiVersion: v1 
+kind: Deployment 
+metadata: 
+    name: web-server 
+spec: 
+   replicas: 3 
+   selector: 
+     matchLabels: 
+        app: web-store 
+   template: 
+      metadata:  
+         labels: 
+            app: web-app 
+      spec: 
+         affinity: 
+           podAntiAffinity: 
+              requiredDuringSchedulingIgnoredDuringExecution: 
+              - labelSelector: 
+                  matchExpressions: 
+                  - key: APP 
+                    operator: In 
+                    values: 
+                    - web-app 
+                topologyKey: "kubernetes.io/hostname" 
+           podAffinity: 
+              requiredDuringSchedulingIgnoreDuringExecution: 
+              - labelSeclector: 
+                  matchExpressions: 
+                  - key: app 
+                    operator: In 
+                    values: 
+                    - store 
+         containers: 
+         - name: web-app
+           image: nginx:1.16-alpine            
                                                     
