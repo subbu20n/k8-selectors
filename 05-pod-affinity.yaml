@@ -27,7 +27,18 @@ spec:
               operator: In 
               values: 
               - pod-1 
-          topologyKey: "kubernetes.io/hostname"    
+          topologyKey: "kubernetes.io/hostname"  
+        
+        preferredDuringSchedulingIgnoredDuringExecution: 
+        - weight: 1 
+          podAffinityTerm: 
+           labelSelector: 
+             matchExpressions: 
+             - key: app-nameee 
+               operator: In 
+               values: 
+               - pod-1 
+           topologyKey: "kubernetes.io/hostname"      
    containers: 
    - name: pod-2 
      image: nginx                              
