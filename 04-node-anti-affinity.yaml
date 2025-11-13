@@ -6,7 +6,7 @@ spec:
    affinity: 
      nodeAffinity: 
        requiredDuringSchedulingIgnoredDuringExecution:
-       - nodeSelectorTerms: 
+        nodeSelectorTerms: 
          - matchExpressions: 
            - key: hardware 
              operator: NotIn
@@ -15,4 +15,3 @@ spec:
    containers:
    - name: with-node-anti-affinity 
      image: nginx 
-                    
