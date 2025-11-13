@@ -4,8 +4,9 @@ metadata:
     name: redis-cache 
 spec: 
    replicas: 3 
-   selector: 
-      app: store 
+   selector:
+     matchLabels:  
+       app: store 
    template: 
       metadata: 
          labels: 
