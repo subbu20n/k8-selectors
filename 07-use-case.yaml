@@ -38,7 +38,7 @@ spec:
    template: 
       metadata:  
          labels: 
-            app: web-app 
+            app: web-store
       spec: 
          affinity: 
            podAntiAffinity: 
