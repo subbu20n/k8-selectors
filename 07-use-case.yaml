@@ -51,7 +51,7 @@ spec:
                     - web-app 
                 topologyKey: "kubernetes.io/hostname" 
            podAffinity: 
-              requiredDuringSchedulingIgnoreDuringExecution: 
+              requiredDuringSchedulingIgnoredDuringExecution: 
               - labelSeclector: 
                   matchExpressions: 
                   - key: app 
