@@ -13,7 +13,7 @@ spec:
         #       values: 
         #       #- gpu
         #       - gpuu 
-         preferredDuringSchedulingIgnoreDuringExecution: 
+         preferredDuringSchedulingIgnoredDuringExecution: 
          - weight: 1 
            preference: 
              matchExpressions: 
