@@ -23,5 +23,8 @@ spec:
                - another-node-label-value 
    containers: 
    - name: with-node-affinity 
-     image: nginx              
-                            
+     image: nginx           
+
+     
+         
+                             
