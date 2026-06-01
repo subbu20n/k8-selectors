@@ -12,3 +12,4 @@ spec:
    nodeSelector: 
         disktype: ssd          
 
+ 
